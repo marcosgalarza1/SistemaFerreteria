@@ -103,7 +103,7 @@
 
                         <li>
 	
-                            <a href="http://localhost/posferromax/pagina2/index.php">
+                            <a href="http://localhost/SistemaFerreteria/pagina2/index.php">
                              <i class="fa fa-circle-o"></i>
                               <span style="font-weight: bold;">Pagina Web</span>
                             </a>

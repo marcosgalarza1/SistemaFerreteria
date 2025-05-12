@@ -261,17 +261,17 @@ $productos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <div class="mega-menu-wrapper">
                     <div class="header-main">
                         <div class="logo">
-                            <a href="index.html"
+                            <a href="index.php"
                                 class=" pollos-rossy-titulo navbar-brand text-success logo h1 align-self-center">
                                 FERROEXPRESS</a>
                         </div>
                         <div class="header-left">
                             <div class="mean__menu-wrapper d-none d-lg-block">
                                 <div class="main-menu">
-                                    <nav id="mobile-menu">
+                                  <nav id="mobile-menu">
                                         <ul>
                                             <li class="active" style="padding-left: -20px;">
-                                                <a href="index.html">
+                                                <a href="index.php">
                                                     INICIO
                                                 </a>
                                             </li>
@@ -284,6 +284,7 @@ $productos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                                 <a href="about.html">
                                                     Nosostros
                                                 </a>
+
                                             </li>
                                             <li>
                                                 <a href="testimonial.html">
@@ -293,6 +294,7 @@ $productos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                             <li>
                                                 <a href="contact.html">Contactanos</a>
                                             </li>
+
                                             <li>
                                                 <a href="login.php">Login</a>
                                             </li>
@@ -303,7 +305,7 @@ $productos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         </div>
                         <div class="header-right d-flex justify-content-end align-items-center">
                             <div class="header-button">
-                                <a href="https://wa.me/59175620296?text=QUIERO%20HACER%20UN%20PEDIDO EN POLLOS ROSSY"
+                                <a href="https://wa.me/59175620296?text=QUIERO%20HACER%20UN%20CONSULTA DE HERRAMIENTA"
                                     target="BLANK" class="theme-btn bg-red-2" data-wow-delay=".5s">Pide aquí</a>
                             </div>
                             <div class="header__hamburger d-xl-block my-auto">

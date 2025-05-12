@@ -81,52 +81,53 @@ $marcas = $stmtMarcas->fetchAll(PDO::FETCH_ASSOC);
         .testimonial-image-slider {
             display: none !important;
         }
+
         .pollos-rossy-titulo {
-        font-family: 'Bangers', Impact, Arial, sans-serif;
-        font-size: 48px;
-        color: #fff200 !important;
-        text-shadow:
-            4px 4px 0 #000,
-            8px 8px 15px #ff3300;
-        letter-spacing: 2px;
-        font-weight: bold;
-        padding: 5px 0;
-        display: inline-block;
-    }
+            font-family: 'Bangers', Impact, Arial, sans-serif;
+            font-size: 48px;
+            color: #fff200 !important;
+            text-shadow:
+                4px 4px 0 #000,
+                8px 8px 15px #ff3300;
+            letter-spacing: 2px;
+            font-weight: bold;
+            padding: 5px 0;
+            display: inline-block;
+        }
 
-    .product-details {
-        padding: 10px;
-        background: #f8f9fa;
-        border-radius: 5px;
-        margin: 10px 0;
-    }
+        .product-details {
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
 
-    .product-details p {
-        margin-bottom: 5px;
-        font-size: 14px;
-    }
+        .product-details p {
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
 
-    .product-details strong {
-        color: #333;
-        font-weight: 600;
-    }
+        .product-details strong {
+            color: #333;
+            font-weight: 600;
+        }
 
-    .catagory-product-card-2 {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-    }
+        .catagory-product-card-2 {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
 
-    .catagory-product-content {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-    }
+        .catagory-product-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
 
-    .catagory-product-image img {
-        max-height: 200px;
-        object-fit: contain;
-    }
+        .catagory-product-image img {
+            max-height: 200px;
+            object-fit: contain;
+        }
     </style>
 </head>
 
@@ -249,7 +250,7 @@ $marcas = $stmtMarcas->fetchAll(PDO::FETCH_ASSOC);
                                     <nav id="mobile-menu">
                                         <ul>
                                             <li class="active" style="padding-left: -20px;">
-                                                <a href="index.html">
+                                                <a href="index.php">
                                                     INICIO
                                                 </a>
                                             </li>
@@ -435,36 +436,36 @@ $marcas = $stmtMarcas->fetchAll(PDO::FETCH_ASSOC);
             </div>
         </div>
     </section>
-      <!-- NUESTROS PRODUCTOS -->
-      <section class="food-category-section fix section-padding section-bg">
-            <div class="tomato-shape">
-                <img src="assets/img/shape/tomato-shape-2.webp" alt="shape-img">
-          </div>
-            <div class="burger-shape-2">
-                <img src="assets/img/shape/fry-shape-2.webp" alt="shape-img">
-              </div>
-            <div class="container">
-                      <div class="row">
-                    <div class="col-md-7 col-9">
-                        <div class="section-title">
-                            <span class="wow fadeInUp">Conoce</span>
-                            <h2 class="wow fadeInUp" data-wow-delay=".3s">Nuestros Productos</h2>
-                        </div>
-                    </div>
-                    <div class="col-md-5 ps-0 col-3 text-end wow fadeInUp" data-wow-delay=".5s">
-                        <div class="array-button">
-                            <button class="array-prev"><i class="far fa-long-arrow-left"></i></button>
-                            <button class="array-next"><i class="far fa-long-arrow-right"></i></button>
-                        </div>
+    <!-- NUESTROS PRODUCTOS -->
+    <section class="food-category-section fix section-padding section-bg">
+       <!--  <div class="tomato-shape">
+            <img src="assets/img/shape/tomato-shape-2.webp" alt="shape-img">
+        </div>
+        <div class="burger-shape-2">
+            <img src="assets/img/shape/fry-shape-2.webp" alt="shape-img">
+        </div> -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 col-9">
+                    <div class="section-title">
+                        <span class="wow fadeInUp">Conoce</span>
+                        <h2 class="wow fadeInUp" data-wow-delay=".3s">Nuestros Productos</h2>
                     </div>
                 </div>
-                <div class="swiper food-catagory-slider">
-                    <div class="swiper-wrapper">
-                        <?php foreach ($productosDestacados as $producto): ?>
+                <div class="col-md-5 ps-0 col-3 text-end wow fadeInUp" data-wow-delay=".5s">
+                    <div class="array-button">
+                        <button class="array-prev"><i class="far fa-long-arrow-left"></i></button>
+                        <button class="array-next"><i class="far fa-long-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper food-catagory-slider">
+                <div class="swiper-wrapper">
+                    <?php foreach ($productosDestacados as $producto): ?>
                         <div class="swiper-slide">
                             <div class="catagory-product-card-2 shadow-style text-center">
                                 <div class="icon">
-                                    <a href="https://wa.me/59178069757?text=Hola FerroExpress%20Quiero%20comprar%20este%20producto:%0A%0A*Descripción:*%20<?=urlencode(htmlspecialchars($producto['descripcion']))?>%0A*Categoría:*%20<?=urlencode(htmlspecialchars($producto['categoria']))?>%0A*Marca:*%20<?=urlencode(htmlspecialchars($producto['marca']))?>%0A*Tipo:*%20<?=urlencode(htmlspecialchars($producto['madela']))?>%0A*Unidad-Capacidad:*%20<?=urlencode(htmlspecialchars($producto['medida']))?>%0A*Precio:*%20<?=urlencode(number_format($producto['precio_venta'],2))?>%20Bs" target="_blank">
+                                    <a href="https://wa.me/59178069757?text=Hola FerroExpress%20Quiero%20comprar%20este%20producto:%0A%0A*Descripción:*%20<?= urlencode(htmlspecialchars($producto['descripcion'])) ?>%0A*Categoría:*%20<?= urlencode(htmlspecialchars($producto['categoria'])) ?>%0A*Marca:*%20<?= urlencode(htmlspecialchars($producto['marca'])) ?>%0A*Tipo:*%20<?= urlencode(htmlspecialchars($producto['madela'])) ?>%0A*Unidad-Capacidad:*%20<?= urlencode(htmlspecialchars($producto['medida'])) ?>%0A*Precio:*%20<?= urlencode(number_format($producto['precio_venta'], 2)) ?>%20Bs" target="_blank">
                                         <i class="fab fa-whatsapp"></i>
                                     </a>
                                 </div>
@@ -473,9 +474,9 @@ $marcas = $stmtMarcas->fetchAll(PDO::FETCH_ASSOC);
                                 </div>
                                 <div class="catagory-product-content">
                                     <div class="catagory-button">
-                                        <a href="https://wa.me/59178069757?text=Hola FerroExpress%20Quiero%20comprar%20este%20producto:%0A%0A*Descripción:*%20<?=urlencode(htmlspecialchars($producto['descripcion']))?>%0A*Categoría:*%20<?=urlencode(htmlspecialchars($producto['categoria']))?>%0A*Marca:*%20<?=urlencode(htmlspecialchars($producto['marca']))?>%0A*Tipo:*%20<?=urlencode(htmlspecialchars($producto['madela']))?>%0A*Unidad-Capacidad:*%20<?=urlencode(htmlspecialchars($producto['medida']))?>%0A*Precio:*%20<?=urlencode(number_format($producto['precio_venta'],2))?>%20Bs" 
-                                           target="_blank" 
-                                           class="theme-btn-2">
+                                        <a href="https://wa.me/59178069757?text=Hola FerroExpress%20Quiero%20comprar%20este%20producto:%0A%0A*Descripción:*%20<?= urlencode(htmlspecialchars($producto['descripcion'])) ?>%0A*Categoría:*%20<?= urlencode(htmlspecialchars($producto['categoria'])) ?>%0A*Marca:*%20<?= urlencode(htmlspecialchars($producto['marca'])) ?>%0A*Tipo:*%20<?= urlencode(htmlspecialchars($producto['madela'])) ?>%0A*Unidad-Capacidad:*%20<?= urlencode(htmlspecialchars($producto['medida'])) ?>%0A*Precio:*%20<?= urlencode(number_format($producto['precio_venta'], 2)) ?>%20Bs"
+                                            target="_blank"
+                                            class="theme-btn-2">
                                             <i class="fab fa-whatsapp"></i> Pedir
                                         </a>
                                     </div>
@@ -512,12 +513,12 @@ $marcas = $stmtMarcas->fetchAll(PDO::FETCH_ASSOC);
                                 </div>
                             </div>
                         </div>
-                        <?php endforeach; ?>
-                    </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
-        </section>
-   <!-- FIN NUESTROS PRODUCTOS -->
+        </div>
+    </section>
+    <!-- FIN NUESTROS PRODUCTOS -->
 
 
     <!-- NUESTROS PROVEEDORES -->
@@ -677,7 +678,7 @@ $marcas = $stmtMarcas->fetchAll(PDO::FETCH_ASSOC);
                             <div class="swiper-slide">
                                 <div class="testimonial-content">
                                     <div class="client-info">
-                                        <h4>Rosalinda Terrazas</h4>
+                                        <h4>Ariana Gutierrez</h4>
                                         <h5>Cliente</h5>
                                     </div>
                                     <h3>
@@ -742,12 +743,12 @@ $marcas = $stmtMarcas->fetchAll(PDO::FETCH_ASSOC);
     <!--Yango -->
     <section class="main-cta-banner-2 section-padding bg-cover"
         style="background-image: url('assets/img/banner/main-cta-bg-2.webp');">
-        <div class="tomato-shape-left float-bob-y">
+        <!-- <div class="tomato-shape-left float-bob-y">
             <img src="assets/img/h11.png" alt="shape-img">
         </div>
         <div class="chili-shape-right float-bob-y">
             <img src="assets/img/h12.png" alt="shape-img">
-        </div>
+        </div> -->
         <div class="container">
             <div class="main-cta-banner-wrapper-2 d-flex align-items-center justify-content-between">
                 <div class="section-title mb-0">
