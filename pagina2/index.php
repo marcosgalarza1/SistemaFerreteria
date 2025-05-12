@@ -465,7 +465,7 @@ $marcas = $stmtMarcas->fetchAll(PDO::FETCH_ASSOC);
                         <div class="swiper-slide">
                             <div class="catagory-product-card-2 shadow-style text-center">
                                 <div class="icon">
-                                    <a href="https://wa.me/59178069757?text=Hola FerroExpress%20Quiero%20comprar%20este%20producto:%0A%0A*Descripción:*%20<?= urlencode(htmlspecialchars($producto['descripcion'])) ?>%0A*Categoría:*%20<?= urlencode(htmlspecialchars($producto['categoria'])) ?>%0A*Marca:*%20<?= urlencode(htmlspecialchars($producto['marca'])) ?>%0A*Tipo:*%20<?= urlencode(htmlspecialchars($producto['madela'])) ?>%0A*Unidad-Capacidad:*%20<?= urlencode(htmlspecialchars($producto['medida'])) ?>%0A*Precio:*%20<?= urlencode(number_format($producto['precio_venta'], 2)) ?>%20Bs" target="_blank">
+                                    <a href="https://wa.me/59178164099?text=Hola FerroExpress%20Quiero%20comprar%20este%20producto:%0A%0A*Descripción:*%20<?= urlencode(htmlspecialchars($producto['descripcion'])) ?>%0A*Categoría:*%20<?= urlencode(htmlspecialchars($producto['categoria'])) ?>%0A*Marca:*%20<?= urlencode(htmlspecialchars($producto['marca'])) ?>%0A*Tipo:*%20<?= urlencode(htmlspecialchars($producto['madela'])) ?>%0A*Unidad-Capacidad:*%20<?= urlencode(htmlspecialchars($producto['medida'])) ?>%0A*Precio:*%20<?= urlencode(number_format($producto['precio_venta'], 2)) ?>%20Bs" target="_blank">
                                         <i class="fab fa-whatsapp"></i>
                                     </a>
                                 </div>
@@ -474,7 +474,7 @@ $marcas = $stmtMarcas->fetchAll(PDO::FETCH_ASSOC);
                                 </div>
                                 <div class="catagory-product-content">
                                     <div class="catagory-button">
-                                        <a href="https://wa.me/59178069757?text=Hola FerroExpress%20Quiero%20comprar%20este%20producto:%0A%0A*Descripción:*%20<?= urlencode(htmlspecialchars($producto['descripcion'])) ?>%0A*Categoría:*%20<?= urlencode(htmlspecialchars($producto['categoria'])) ?>%0A*Marca:*%20<?= urlencode(htmlspecialchars($producto['marca'])) ?>%0A*Tipo:*%20<?= urlencode(htmlspecialchars($producto['madela'])) ?>%0A*Unidad-Capacidad:*%20<?= urlencode(htmlspecialchars($producto['medida'])) ?>%0A*Precio:*%20<?= urlencode(number_format($producto['precio_venta'], 2)) ?>%20Bs"
+                                        <a href="https://wa.me/59178164099?text=Hola FerroExpress%20Quiero%20comprar%20este%20producto:%0A%0A*Descripción:*%20<?= urlencode(htmlspecialchars($producto['descripcion'])) ?>%0A*Categoría:*%20<?= urlencode(htmlspecialchars($producto['categoria'])) ?>%0A*Marca:*%20<?= urlencode(htmlspecialchars($producto['marca'])) ?>%0A*Tipo:*%20<?= urlencode(htmlspecialchars($producto['madela'])) ?>%0A*Unidad-Capacidad:*%20<?= urlencode(htmlspecialchars($producto['medida'])) ?>%0A*Precio:*%20<?= urlencode(number_format($producto['precio_venta'], 2)) ?>%20Bs"
                                             target="_blank"
                                             class="theme-btn-2">
                                             <i class="fab fa-whatsapp"></i> Pedir
