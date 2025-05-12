@@ -1,3 +1,3 @@
 <?php
 
-$mysqli = new   mysqli("localhost","root","","ferromax");
+$mysqli = new   mysqli("localhost","root","","ferreteria");

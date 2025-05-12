@@ -226,7 +226,7 @@ $productos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <div class="mobile-menu fix mb-3"></div>
                     <div class="offcanvas__contact">
                         <div class="header-button mt-4">
-                            <a href="https://wa.me/59175620296?text=QUIERO%20HACER%20UN%20PEDIDO EN POLLOS ROSSY"
+                            <a href="https://wa.me/59175620296?text=QUIERO%20HACER%20UN%20uNA Consulta de unas herramientas"
                                 target="BLANK" class="theme-btn" data-wow-delay=".5s">
                                 <span class="button-content-wrapper d-flex align-items-center justify-content-center">
                                     <span class="button-icon"><i class="flaticon-delivery"></i></span>
@@ -409,7 +409,7 @@ $productos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                 <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
                                     <div class="catagory-product-card-2 shadow-style text-center">
                                         <div class="icon">
-                                            <a href="https://wa.me/59178069757?text=Hola FerroExpress%20Quiero%20comprar%20este%20producto:%0A%0A*Descripción:*%20<?=urlencode(htmlspecialchars($producto['descripcion']))?>%0A*Categoría:*%20<?=urlencode(htmlspecialchars($producto['categoria']))?>%0A*Marca:*%20<?=urlencode(htmlspecialchars($producto['marca']))?>%0A*Tipo:*%20<?=urlencode(htmlspecialchars($producto['madela']))?>%0A*Unidad-Capacidad:*%20<?=urlencode(htmlspecialchars($producto['medida']))?>%0A*Precio:*%20<?=urlencode(number_format($producto['precio_venta'],2))?>%20Bs" target="_blank">
+                                            <a href="https://wa.me/59178164099?text=Hola FerroExpress%20Quiero%20comprar%20este%20producto:%0A%0A*Descripción:*%20<?=urlencode(htmlspecialchars($producto['descripcion']))?>%0A*Categoría:*%20<?=urlencode(htmlspecialchars($producto['categoria']))?>%0A*Marca:*%20<?=urlencode(htmlspecialchars($producto['marca']))?>%0A*Tipo:*%20<?=urlencode(htmlspecialchars($producto['madela']))?>%0A*Unidad-Capacidad:*%20<?=urlencode(htmlspecialchars($producto['medida']))?>%0A*Precio:*%20<?=urlencode(number_format($producto['precio_venta'],2))?>%20Bs" target="_blank">
                                                 <i class="fab fa-whatsapp"></i>
                                             </a>
                                         </div>
@@ -418,7 +418,7 @@ $productos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                         </div>
                                         <div class="catagory-product-content">
                                             <div class="catagory-button">
-                                                <a href="https://wa.me/59178069757?text=Hola FerroExpress%20Quiero%20comprar%20este%20producto:%0A%0A*Descripción:*%20<?=urlencode(htmlspecialchars($producto['descripcion']))?>%0A*Categoría:*%20<?=urlencode(htmlspecialchars($producto['categoria']))?>%0A*Marca:*%20<?=urlencode(htmlspecialchars($producto['marca']))?>%0A*Tipo:*%20<?=urlencode(htmlspecialchars($producto['madela']))?>%0A*Unidad-Capacidad:*%20<?=urlencode(htmlspecialchars($producto['medida']))?>%0A*Precio:*%20<?=urlencode(number_format($producto['precio_venta'],2))?>%20Bs" 
+                                                <a href="https://wa.me/59178164099?text=Hola FerroExpress%20Quiero%20comprar%20este%20producto:%0A%0A*Descripción:*%20<?=urlencode(htmlspecialchars($producto['descripcion']))?>%0A*Categoría:*%20<?=urlencode(htmlspecialchars($producto['categoria']))?>%0A*Marca:*%20<?=urlencode(htmlspecialchars($producto['marca']))?>%0A*Tipo:*%20<?=urlencode(htmlspecialchars($producto['madela']))?>%0A*Unidad-Capacidad:*%20<?=urlencode(htmlspecialchars($producto['medida']))?>%0A*Precio:*%20<?=urlencode(number_format($producto['precio_venta'],2))?>%20Bs" 
                                                    target="_blank" 
                                                    class="theme-btn-2">
                                                     <i class="fab fa-whatsapp"></i> Pedir
