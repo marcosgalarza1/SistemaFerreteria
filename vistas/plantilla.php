@@ -119,7 +119,7 @@
 <style>
 .skin-blue .main-header .navbar {
  
-  background-color: #f39c12;
+  background-color: #a04000;
 
     color: white; /* Cambiar el color del texto a blanco para que sea legible en el degradado oscuro */
   
