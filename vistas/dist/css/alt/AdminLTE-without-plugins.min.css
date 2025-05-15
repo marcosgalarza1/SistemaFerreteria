@@ -2654,7 +2654,7 @@ a:focus {
   border-top-color: #d2d6de;
 }
 .pagination > li > a {
-  background: #fafafa;
+  background:#a04000;
   color: #666;
 }
 .pagination.pagination-flat > li > a {

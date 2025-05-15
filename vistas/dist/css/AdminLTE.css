@@ -3013,11 +3013,11 @@ a:focus {
 }
 /* PAGINATION */
 .pagination > li > a {
-  background: #fafafa;
+  background: #a0400077;
   color: #666;
 }
 .pagination.pagination-flat > li > a {
-  border-radius: 0 !important;
+  border-radius: 25% !important;
 }
 /*
   * Component: Products List

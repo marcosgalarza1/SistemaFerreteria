@@ -56,7 +56,7 @@ GRÁFICO DE VENTAS
 		
  		<i class="fa fa-th"></i>
 
-  		<h3 class="box-title">Gráfico de Ventas</h3>
+  		<h3 class="box-title">Gráfico de Ventass</h3>
 
 	</div>
 
@@ -67,6 +67,7 @@ GRÁFICO DE VENTAS
   </div>
 
 </div>
+
 
 <script>
 	
