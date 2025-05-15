@@ -36,14 +36,19 @@ $ventasTotaldDiaActual = ControladorVentas::ctrVentasTotalDia();
 ?>
 <style>
 .small-box {
-  background-color: #d35400 ;
+  background-color:rgba(211, 84, 0, 0.44) ;
 }
+.small-box 
+.bg{
+background-color:rgba(0, 31, 63, 0.48);
+}
+
 </style>
 
 
 <div class="col-lg-3 col-xs-6 text-uppercase ">
 
-  <div class="small-box ">
+  <div class="small-box bg">
 
     <div class="inner">
 
@@ -80,7 +85,7 @@ $ventasTotaldDiaActual = ControladorVentas::ctrVentasTotalDia();
 
 <div class="col-lg-3 col-xs-6 text-uppercase ">
 
-  <div class="small-box bg-black">
+  <div class="small-box bg">
 
     <div class="inner">
 
@@ -144,7 +149,7 @@ $ventasTotaldDiaActual = ControladorVentas::ctrVentasTotalDia();
 
 <div class="col-lg-3 col-xs-5 text-uppercase ">
 
-  <div class="small-box bg-black">
+  <div class="small-box bg">
 
     <div class="inner">
 
@@ -208,7 +213,7 @@ $ventasTotaldDiaActual = ControladorVentas::ctrVentasTotalDia();
 
 <div class="col-lg-3 col-xs-6 text-uppercase">
 
-  <div class="small-box bg-black">
+  <div class="small-box bg">
 
     <div class="inner">
 
@@ -265,7 +270,7 @@ $ventasTotaldDiaActual = ControladorVentas::ctrVentasTotalDia();
 
 <div class="col-lg-3 col-xs-6 text-uppercase">
 
-  <div class="small-box bg-black">
+  <div class="small-box bg">
 
     <div class="inner">
 
@@ -320,7 +325,7 @@ $ventasTotaldDiaActual = ControladorVentas::ctrVentasTotalDia();
 
 <div class="col-lg-3 col-xs-6 text-uppercase">
 
-  <div class="small-box bg-black">
+  <div class="small-box bg">
 
     <div class="inner">
 
