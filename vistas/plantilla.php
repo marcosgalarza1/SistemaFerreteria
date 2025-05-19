@@ -1,8 +1,15 @@
- <?php
+<?php
+session_start();
 
- session_start();
+$rutaActual = isset($_GET["ruta"]) ? $_GET["ruta"] : "";
 
- ?>
+if (!isset($_SESSION["iniciarSesion"]) || $_SESSION["iniciarSesion"] != "ok") {
+    if ($rutaActual !== "login") {
+        header("Location: index.php?ruta=login");
+        exit();
+    }
+}
+?>
 
 <!DOCTYPE html>
 <html>
@@ -191,7 +198,9 @@ CUERPO DOCUMENTO
  
   <?php
 
-  if(isset($_SESSION["iniciarSesion"]) && $_SESSION["iniciarSesion"] == "ok"){
+  if(isset($_GET["ruta"]) && $_GET["ruta"] == "login") {
+      include "modulos/login.php";
+  } else if(isset($_SESSION["iniciarSesion"]) && $_SESSION["iniciarSesion"] == "ok"){
 
    echo '<div class="wrapper">';
 
@@ -261,9 +270,6 @@ CUERPO DOCUMENTO
 
     echo '</div>';
     include "vistas/plantilla_footer.php";
-  }else{
-    header("Location: pagina2/");
-    exit();
   }
 
   ?>
