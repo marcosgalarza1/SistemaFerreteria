@@ -48,9 +48,13 @@ $noRepetirFechas = array_unique($arrayFechas);
 <!--=====================================
 GRÁFICO DE VENTAS
 ======================================-->
+<style>
+  .box-solid.bg{
+background-color:rgba(0, 31, 63, 0.69);
+}
+</style>
 
-
-<div class="box box-solid bg-teal-gradient">
+<div class="box box-solid bg">
 	
 	<div class="box-header">
 		

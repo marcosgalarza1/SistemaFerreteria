@@ -13,8 +13,8 @@ class PDF extends FPDF
         /* $this->Image('vistas/img/', 170, 8, 30); */ // Ajusta la posición si es necesario
         // Título
         $this->SetFont('Arial', 'B', 14);
-        $this->Cell(0, 10, 'FERREETERIA FERROJMAXS', 0, 1, 'C');
-        $this->Cell(0, 8, utf8_decode('URB ESPAÑA'), 0, 1, 'C');
+        $this->Cell(0, 10, 'FERREETERIA FERROEXPRESS', 0, 1, 'C');
+        /* $this->Cell(0, 8, utf8_decode('URB ESPAÑA'), 0, 1, 'C'); */
 
 
         
@@ -78,7 +78,7 @@ $tablaAncho = 180; // Ancho total de la tabla en mm
 $anchoColumna = array(20, 70, 15, 25, 20, 35); // Ancho de cada columna
 
 // Ejecutar la consulta y agregar los datos al PDF
-$sql = "SELECT id, codigo, descripcion, imagen, stock, precio_venta, ventas, fecha FROM productos";
+$sql = "SELECT id, codigo, descripcion, imagen, stock,medida, precio_venta, ventas, fecha FROM productos";
 if ($resultado = $mysqli->query($sql)) {
     while ($fila = $resultado->fetch_assoc()) {
         // Verificar si el espacio en la página es suficiente para la fila
@@ -93,6 +93,7 @@ if ($resultado = $mysqli->query($sql)) {
         $pdf->Cell($anchoColumna[0], 10, $fila['codigo'], 1, 0, "C");
         $pdf->Cell($anchoColumna[1], 10, strtoupper($fila['descripcion']), 1, 0, "L");
         $pdf->Cell($anchoColumna[2], 10, $fila['stock'], 1, 0, "C");
+        $pdf->Cell($anchoColumna[2], 10, $fila['medida'], 1, 0, "C");
         $pdf->Cell($anchoColumna[3], 10, number_format($fila['precio_venta'], 2), 1, 0, "R");
         $pdf->Cell($anchoColumna[4], 10, $fila['ventas'], 1, 0, "C");
         $pdf->Cell($anchoColumna[5], 10, $fila['fecha'], 1, 1, "C");

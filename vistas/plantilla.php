@@ -260,14 +260,14 @@ CUERPO DOCUMENTO
     include "modulos/footer.php";
 
     echo '</div>';
-
+    include "vistas/plantilla_footer.php";
   }else{
-
-    include "modulos/login.php";
-
+    header("Location: pagina2/");
+    exit();
   }
 
   ?>
+
 
 <!-- vinculamos  LAS CARPETAS -->
 <script src="vistas/js/plantilla.js"></script>

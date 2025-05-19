@@ -226,7 +226,7 @@ $productos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <div class="mobile-menu fix mb-3"></div>
                     <div class="offcanvas__contact">
                         <div class="header-button mt-4">
-                            <a href="https://wa.me/59175620296?text=QUIERO%20HACER%20UN%20uNA Consulta de unas herramientas"
+                            <a href="https://wa.me/59178164099?text=HOLA QUIERO%20HACER%20UNA%20CONSULTA DE UNAS HERRAMIENTAS"
                                 target="BLANK" class="theme-btn" data-wow-delay=".5s">
                                 <span class="button-content-wrapper d-flex align-items-center justify-content-center">
                                     <span class="button-icon"><i class="flaticon-delivery"></i></span>
@@ -305,7 +305,7 @@ $productos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         </div>
                         <div class="header-right d-flex justify-content-end align-items-center">
                             <div class="header-button">
-                                <a href="https://wa.me/59175620296?text=QUIERO%20HACER%20UN%20CONSULTA DE HERRAMIENTA"
+                                <a href="https://wa.me/59178164099?text=HOLA QUIERO%20HACER%20UNA%20CONSULTA DE UNAS HERRAMIENTAS"
                                     target="BLANK" class="theme-btn bg-red-2" data-wow-delay=".5s">Pide aquí</a>
                             </div>
                             <div class="header__hamburger d-xl-block my-auto">
@@ -487,7 +487,7 @@ $productos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <span class="theme-color-3">delivery</span>
                     </h2>
                 </div>
-                <a href="https://wa.me/59175620296?text=QUIERO%20HACER%20UN%20PEDIDO EN POLLOS ROSSY" target="BLANK"
+                <a href="https://wa.me/59178164099?text=HOLA QUIERO%20HACER%20UNA%20CONSULTA DE UNAS HERRAMIENTAS" target="BLANK"
                     class="theme-btn bg-white wow fadeInUp" data-wow-delay=".5s">
                     <span class="button-content-wrapper d-flex align-items-center">
                         <span class="button-icon"><i class="flaticon-delivery"></i></span>

@@ -36,11 +36,10 @@ $ventasTotaldDiaActual = ControladorVentas::ctrVentasTotalDia();
 ?>
 <style>
 .small-box {
-  background-color:rgba(211, 84, 0, 0.44) ;
+  background-color:rgba(211, 84, 0, 0.51) ;
 }
-.small-box 
-.bg{
-background-color:rgba(0, 31, 63, 0.48);
+ .bg{
+background-color:rgba(0, 31, 63, 0.59);
 }
 
 </style>
@@ -48,7 +47,7 @@ background-color:rgba(0, 31, 63, 0.48);
 
 <div class="col-lg-3 col-xs-6 text-uppercase ">
 
-  <div class="small-box bg">
+  <div class="small-box ">
 
     <div class="inner">
 

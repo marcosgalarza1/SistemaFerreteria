@@ -198,7 +198,7 @@ $marcas = $stmtMarcas->fetchAll(PDO::FETCH_ASSOC);
                     <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
                         <div class="offcanvas__logo">
                             <a href="index.html">
-                                <img src="#" alt="logo-img">
+                                <img src="assets/img/hero/logomini.png" alt="logo-img">
                             </a>
                         </div>
                         <div class="offcanvas__close">
@@ -216,11 +216,11 @@ $marcas = $stmtMarcas->fetchAll(PDO::FETCH_ASSOC);
 
 
                         <div class="header-button mt-4">
-                            <a href="https://wa.me/59175620296?text=QUIERO%20HACER%20UN%20PEDIDO EN POLLOS ROSSY"
+                            <a href="https://wa.me/59178164099?text=HOLA QUIERO%20HACER%20UNA%20CONSULTA DE UNAS HERRAMIENTAS"
                                 target="BLANK" class="theme-btn" data-wow-delay=".5s">
                                 <span class="button-content-wrapper d-flex align-items-center justify-content-center">
                                     <span class="button-icon"><i class="flaticon-delivery"></i></span>
-                                    <span class="button-text">ordenar ahora</span>
+                                    <span class="button-text">Consulta ahora</span>
                                 </span>
                             </a>
                         </div>
@@ -275,8 +275,8 @@ $marcas = $stmtMarcas->fetchAll(PDO::FETCH_ASSOC);
                                             </li>
 
                                             <li>
-                                                <a href="login.php">Login</a>
-                                            </li>
+                                                    <a href="../login">Login</a>
+                                         </li>
                                         </ul>
                                     </nav>
                                     <!-- for wp -->
@@ -287,7 +287,7 @@ $marcas = $stmtMarcas->fetchAll(PDO::FETCH_ASSOC);
 
                             <div class="header-button">
 
-                                <a href="https://wa.me/59175620296?text=QUIERO%20HACER%20UN%20PEDIDO EN POLLOS ROSSY"
+                              <a href="https://wa.me/59178164099?text=HOLA QUIERO%20HACER%20UNA%20CONSULTA DE UNAS HERRAMIENTAS"
                                     target="BLANK" class="theme-btn bg-red-2" data-wow-delay=".5s">Pide aquí</a>
 
                             </div>
@@ -758,7 +758,7 @@ $marcas = $stmtMarcas->fetchAll(PDO::FETCH_ASSOC);
                         <span class="theme-color-3">delivery</span>
                     </h2>
                 </div>
-                <a href="https://wa.me/59175620296?text=QUIERO%20HACER%20UN%20PEDIDO EN POLLOS ROSSY" target="BLANK"
+              <a href="https://wa.me/59178164099?text=HOLA QUIERO%20HACER%20UNA%20CONSULTA DE UNAS HERRAMIENTAS" target="BLANK"
                     class="theme-btn bg-white wow fadeInUp" data-wow-delay=".5s">
                     <span class="button-content-wrapper d-flex align-items-center">
                         <span class="button-icon"><i class="flaticon-delivery"></i></span>
