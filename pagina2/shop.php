@@ -97,7 +97,7 @@ $productos = $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
         .pollos-rossy-titulo {
             font-family: 'Bangers', Impact, Arial, sans-serif;
-            font-size: 48px;
+            font-size: 40px;
             color: #fff200 !important;
             text-shadow:
                 4px 4px 0 #000,

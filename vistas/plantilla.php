@@ -268,8 +268,8 @@ CUERPO DOCUMENTO
 
     include "modulos/footer.php";
 
-    echo '</div>';
-    include "vistas/plantilla_footer.php";
+   /*  echo '</div>';
+    include "vistas/plantilla_footer.php"; */
   }
 
   ?>

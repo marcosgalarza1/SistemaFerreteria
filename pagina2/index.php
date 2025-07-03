@@ -84,7 +84,7 @@ $marcas = $stmtMarcas->fetchAll(PDO::FETCH_ASSOC);
 
         .pollos-rossy-titulo {
             font-family: 'Bangers', Impact, Arial, sans-serif;
-            font-size: 48px;
+            font-size: 40px;
             color: #fff200 !important;
             text-shadow:
                 4px 4px 0 #000,
@@ -640,7 +640,7 @@ $marcas = $stmtMarcas->fetchAll(PDO::FETCH_ASSOC);
                             <div class="swiper-slide">
                                 <div class="testimonial-content">
                                     <div class="client-info">
-                                        <h4>Piter quenallata</h4>
+                                        <h4>Kevin Quispe</h4>
                                         <h5>Cliente</h5>
                                     </div>
                                     <h3>
@@ -659,7 +659,7 @@ $marcas = $stmtMarcas->fetchAll(PDO::FETCH_ASSOC);
                             <div class="swiper-slide">
                                 <div class="testimonial-content">
                                     <div class="client-info">
-                                        <h4>Davian perez</h4>
+                                        <h4>Juan Perez</h4>
                                         <h5>Cliente</h5>
                                     </div>
                                     <h3>
@@ -699,7 +699,7 @@ $marcas = $stmtMarcas->fetchAll(PDO::FETCH_ASSOC);
                             <div class="swiper-slide">
                                 <div class="testimonial-content">
                                     <div class="client-info">
-                                        <h4>naomi quinteros</h4>
+                                        <h4>Naomi Quinteros</h4>
                                         <h5>Cliente</h5>
                                     </div>
                                     <h3>
