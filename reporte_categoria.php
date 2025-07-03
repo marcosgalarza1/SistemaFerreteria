@@ -14,9 +14,9 @@ class PDF extends FPDF
        /*  $this->Image('vistas/img/', 170, 8, 30); */ // Ajusta la posición si es necesario
 
         $this->SetFont('Arial', 'B', 14);
-        $this->Cell(0, 10, 'ferreteria ferrojmaxs', 0, 1, 'C');
-        $this->Cell(0, 8, 'urb. españa', 0, 1, 'C');
-       
+        $this->Cell(0, 10, 'FERRETERIA FERROEXPRESS', 0, 1, 'C');
+        /* $this->Cell(0, 8, 'urb. españa', 0, 1, 'C');
+        */
         $this->Ln(7); // Mayor separación después del título
 
         // Título en cada página

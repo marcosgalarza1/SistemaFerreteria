@@ -210,7 +210,7 @@ $productos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
                         <div class="offcanvas__logo">
                             <a href="index.html">
-                                <img src="#" alt="logo-img">
+                                <img src="assets/img/hero/logomini.png" alt="logo-img">
                             </a>
                         </div>
                         <div class="offcanvas__close">
@@ -295,8 +295,8 @@ $productos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                                 <a href="contact.html">Contactanos</a>
                                             </li>
 
-                                            <li>
-                                                <a href="login.php">Login</a>
+                                           <li>
+                                                <a href="../login">Login</a>
                                             </li>
                                         </ul>
                                     </nav>

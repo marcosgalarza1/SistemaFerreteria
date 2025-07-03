@@ -49,6 +49,10 @@ if ($_SESSION["perfil"] == "Vendedor") {
           Agregar categoría
 
         </button>
+        <a class="btn btn-primary" target="_blank" href="reporte_categoria.php">
+          <i class="material-icons"></i>
+          <span class="icon-name"> Imprimir </span>
+        </a>
 
       </div>
 

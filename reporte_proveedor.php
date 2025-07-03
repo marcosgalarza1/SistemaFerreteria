@@ -14,8 +14,8 @@ class PDF extends FPDF
         /* $this->Image('vistas/img/', 170, 8, 30); */ // Ajusta la posición si es necesario
 
         $this->SetFont('Arial', 'B', 14);
-        $this->Cell(0, 10, 'FERRETERIA FERROJMSXS', 0, 1, 'C');
-       
+        $this->Cell(0, 10, 'FERRETERIA FERROEXPRESS', 0, 1, 'C');
+
         $this->Cell(0, 8, utf8_decode('URB ESPAÑA'), 0, 1, 'C');
 
         $this->Ln(7); // Mayor separación después del título
@@ -42,10 +42,11 @@ class PDF extends FPDF
 
         // Imprimir cabeceras de la tabla
         /* $this->Cell($anchoColumna[0], 10, "N°", 1, 0, "C", true); */
-        $this->Cell($anchoColumna[0], 10, "PROVEEDOR", 1, 0, "C", true);
-        $this->Cell($anchoColumna[1], 10, "CONTACTO", 1, 0, "C", true);
-        $this->Cell($anchoColumna[2], 10, "TELEFONO", 1, 0, "C", true);
-        $this->Cell($anchoColumna[3], 10, "DIRECCION", 1, 1, "C", true);
+        $this->Cell($anchoColumna[0], 10, "ID", 1, 0, "C", true);
+        $this->Cell($anchoColumna[1], 10, "PROVEEDOR", 1, 0, "C", true);
+        $this->Cell($anchoColumna[2], 10, "CONTACTO", 1, 0, "C", true);
+        $this->Cell($anchoColumna[3], 10, "TELEFONO", 1, 0, "C", true);
+        $this->Cell($anchoColumna[4], 10, "DIRECCION", 1, 1, "C", true);
     }
 
     // Pie de página
@@ -88,10 +89,11 @@ if ($resultado = $mysqli->query($sql)) {
 
         // Imprimir datos de la fila en mayúsculas
         /*         $pdf->Cell($anchoColumna[0], 10, strtoupper($fila['id']), 1, 0, "L"); */
-        $pdf->Cell($anchoColumna[0], 10, strtoupper($fila['nombre']), 1, 0, "L");
-        $pdf->Cell($anchoColumna[1], 10, strtoupper($fila['empresa']), 1, 0, "L");
-        $pdf->Cell($anchoColumna[2], 10, strtoupper($fila['telefono']), 1, 0, "L");
-        $pdf->Cell($anchoColumna[3], 10, strtoupper($fila['direccion']), 1, 1, "L");
+        $pdf->Cell($anchoColumna[0], 10, strtoupper($fila['id']), 1, 0, "L");
+        $pdf->Cell($anchoColumna[1], 10, strtoupper($fila['nombre']), 1, 0, "L");
+        $pdf->Cell($anchoColumna[2], 10, strtoupper($fila['empresa']), 1, 0, "L");
+        $pdf->Cell($anchoColumna[3], 10, strtoupper($fila['telefono']), 1, 0, "L");
+        $pdf->Cell($anchoColumna[4], 10, strtoupper($fila['direccion']), 1, 1, "L");
     }
     $resultado->free();
 } else {

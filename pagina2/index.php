@@ -208,7 +208,7 @@ $marcas = $stmtMarcas->fetchAll(PDO::FETCH_ASSOC);
                         </div>
                     </div>
                     <p class="text d-none d-lg-block">
-                        Los Mejores Pollo de la Ciudad
+                        Las Mejores Herramientas de la Ciudad
                     </p>
 
                     <div class="mobile-menu fix mb-3"></div>
@@ -275,8 +275,8 @@ $marcas = $stmtMarcas->fetchAll(PDO::FETCH_ASSOC);
                                             </li>
 
                                             <li>
-                                                    <a href="../login">Login</a>
-                                         </li>
+                                                <a href="../login">Login</a>
+                                            </li>
                                         </ul>
                                     </nav>
                                     <!-- for wp -->
@@ -287,7 +287,7 @@ $marcas = $stmtMarcas->fetchAll(PDO::FETCH_ASSOC);
 
                             <div class="header-button">
 
-                              <a href="https://wa.me/59178164099?text=HOLA QUIERO%20HACER%20UNA%20CONSULTA DE UNAS HERRAMIENTAS"
+                                <a href="https://wa.me/59178164099?text=HOLA QUIERO%20HACER%20UNA%20CONSULTA DE UNAS HERRAMIENTAS"
                                     target="BLANK" class="theme-btn bg-red-2" data-wow-delay=".5s">Pide aquí</a>
 
                             </div>
@@ -438,7 +438,7 @@ $marcas = $stmtMarcas->fetchAll(PDO::FETCH_ASSOC);
     </section>
     <!-- NUESTROS PRODUCTOS -->
     <section class="food-category-section fix section-padding section-bg">
-       <!--  <div class="tomato-shape">
+        <!--  <div class="tomato-shape">
             <img src="assets/img/shape/tomato-shape-2.webp" alt="shape-img">
         </div>
         <div class="burger-shape-2">
@@ -758,7 +758,7 @@ $marcas = $stmtMarcas->fetchAll(PDO::FETCH_ASSOC);
                         <span class="theme-color-3">delivery</span>
                     </h2>
                 </div>
-              <a href="https://wa.me/59178164099?text=HOLA QUIERO%20HACER%20UNA%20CONSULTA DE UNAS HERRAMIENTAS" target="BLANK"
+                <a href="https://wa.me/59178164099?text=HOLA QUIERO%20HACER%20UNA%20CONSULTA DE UNAS HERRAMIENTAS" target="BLANK"
                     class="theme-btn bg-white wow fadeInUp" data-wow-delay=".5s">
                     <span class="button-content-wrapper d-flex align-items-center">
                         <span class="button-icon"><i class="flaticon-delivery"></i></span>
