@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-05-2025 a las 05:55:41
+-- Tiempo de generación: 13-07-2025 a las 19:18:29
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -41,15 +41,17 @@ INSERT INTO `categorias` (`id`, `categoria`, `fecha`) VALUES
 (1, ' CONSTRUCCION', '2025-05-11 16:03:25'),
 (2, ' CARPINTERIA', '2025-05-11 16:03:33'),
 (3, 'PLOMERIA', '2025-05-11 16:03:18'),
-(4, 'PINTURA Y ACCESORIOS', '2024-10-02 01:32:33'),
-(6, 'ADHESIVOS Y SELLADORES', '2024-10-02 01:32:55'),
+(4, 'Herramientas de Pintura', '2025-05-12 12:45:22'),
+(6, 'Adhesivos', '2025-05-12 12:46:00'),
 (7, 'CONECTORES Y TUBOS', '2024-10-02 01:42:00'),
 (8, 'HERRAMIENTAS DE JARDINERIA', '2024-10-03 23:05:21'),
 (9, 'Tornillos', '2025-05-11 16:02:09'),
 (10, 'Fontaneria', '2025-05-11 16:02:29'),
 (11, 'Electricidad', '2025-05-11 16:02:41'),
 (12, 'Fierros', '2025-05-11 16:03:50'),
-(13, 'Impermiabilizante', '2025-05-11 16:15:49');
+(13, 'Impermiabilizante', '2025-05-11 16:15:49'),
+(14, 'Pegamentos y Selladores', '2025-05-12 12:46:17'),
+(15, 'Lijas', '2025-05-14 14:18:49');
 
 -- --------------------------------------------------------
 
@@ -73,7 +75,7 @@ CREATE TABLE `clientes` (
 --
 
 INSERT INTO `clientes` (`id`, `nombre`, `documento`, `telefono`, `direccion`, `compras`, `ultima_compra`, `fecha`) VALUES
-(1, 'por defecto', '0000022', '0000000', 'sin direccion', 122, '2025-05-11 13:40:20', '2025-05-11 17:40:20'),
+(1, 'por defecto', '0000022', '0000000', 'sin direccion', 127, '2025-07-03 17:13:08', '2025-07-03 21:13:08'),
 (2, 'ANTONELA MILLER', '74185296SC', ' 785-47-412', '78de agosto', 18, '2024-10-03 21:03:12', '2024-10-04 01:03:12'),
 (3, 'Cristina Gusman', '74185296SC', '258741369', '6 de agosto', 18, '2024-10-03 22:32:34', '2024-10-04 02:32:34'),
 (4, 'Rosalía Gutiérrez', '9818710SC', ' 695-87-412', 'Av. Moscú', 13, '2024-10-03 20:58:04', '2024-10-04 00:58:04'),
@@ -84,7 +86,7 @@ INSERT INTO `clientes` (`id`, `nombre`, `documento`, `telefono`, `direccion`, `c
 (14, 'CARLOS ANDRES HURTADO', '78524717', ' 785-22-633', 'BARRIO AMBORO', 11, '0000-00-00 00:00:00', '2025-04-03 20:36:26'),
 (15, 'ANA GUTIERREZ', '856932147', ' 784-12-369', 'BARRIO LOS PINOS', 4, '0000-00-00 00:00:00', '2025-04-03 20:36:17'),
 (16, 'José daniel ', '7896547', ' 745-12-369', 'calle coco', 8, '2024-10-03 21:02:26', '2024-10-04 01:02:26'),
-(17, 'Raquel Ojinaga', '7459632', ' 788-52-244', 'Mercado primavera', 23, '2024-10-23 22:14:02', '2024-10-24 02:14:02'),
+(17, 'Raquel Osinaga', '7459632', ' 788-52-244', 'Mercado primavera', 23, '2024-10-23 22:14:02', '2025-07-03 21:14:33'),
 (18, 'NAOMI QUINTEROS', '98187456', ' 789-65-412', 'AV. MOSCÚ', 0, '0000-00-00 00:00:00', '2025-04-03 20:11:20'),
 (19, 'JHANEL SOLLES', '9658741', ' 856-97-415', 'AV. NUEVO PALMAR', 0, '0000-00-00 00:00:00', '2025-04-03 20:12:13'),
 (20, 'XIOMARA SOLLES', '745896', ' 369-85-214', 'AV. NUEVO PALMAR', 0, '0000-00-00 00:00:00', '2025-04-03 20:12:45'),
@@ -182,7 +184,8 @@ INSERT INTO `compras` (`id`, `codigo`, `total`, `id_usuario`, `id_proveedor`, `e
 (70, 10061, 560.00, 10, 1, 1, '2025-04-03 20:10:14'),
 (71, 10062, 3240.00, 10, 3, 1, '2025-04-03 20:35:29'),
 (72, 10063, 1550.00, 10, 3, 1, '2025-04-03 20:35:48'),
-(73, 10064, 5500.00, 2, 1, 1, '2025-05-11 17:37:25');
+(73, 10064, 5500.00, 2, 1, 1, '2025-05-11 17:37:25'),
+(74, 10065, 19600.00, 2, 1, 1, '2025-07-03 21:12:37');
 
 -- --------------------------------------------------------
 
@@ -206,79 +209,67 @@ CREATE TABLE `detalle_compra` (
 
 INSERT INTO `detalle_compra` (`id`, `id_producto`, `id_compra`, `producto`, `cantidad`, `precio_compra`, `subtotal`) VALUES
 (2, 78, 55, 'color negro con arillo', 10, 10.00, 100.00),
-(3, 83, 56, 'rojo', 100, 40.00, 4000.00),
 (4, 82, 56, 'PINTURA COLOR AZUL ', 100, 20.00, 2000.00),
-(5, 81, 56, 'LIJA CON ASPERO  COLOR CAFE', 100, 40.00, 4000.00),
 (6, 78, 56, 'color negro con arillo', 100, 10.00, 1000.00),
-(10, 95, 60, 'audifonos de seguridad color azul', 1, 50.00, 50.00),
-(11, 93, 60, 'caretilla  colorblanco negro y gris', 1, 20.00, 20.00),
 (12, 91, 60, 'cinta de enmascar color blanco', 1, 12.00, 12.00),
 (13, 90, 60, 'cinta color rojo', 1, 10.00, 10.00),
 (14, 87, 60, 'cinta acolor nenegro', 1, 50.00, 50.00),
 (15, 86, 60, 'huantyes de seguridad color gris', 1, 15.00, 15.00),
-(16, 93, 61, 'caretilla  colorblanco negro y gris', 1, 20.00, 20.00),
 (17, 91, 61, 'cinta de enmascar color blanco', 1, 12.00, 12.00),
 (18, 90, 61, 'cinta color rojo', 1, 10.00, 10.00),
 (19, 86, 61, 'huantyes de seguridad color gris', 1, 15.00, 15.00),
 (20, 85, 61, 'gafas de seguridad', 1, 10.00, 10.00),
 (21, 87, 61, 'cinta acolor nenegro', 1, 50.00, 50.00),
-(22, 95, 61, 'audifonos de seguridad color azul', 1, 50.00, 50.00),
-(23, 95, 62, 'audifonos de seguridad color azul', 1, 50.00, 50.00),
-(24, 93, 62, 'caretilla  colorblanco negro y gris', 1, 20.00, 20.00),
 (25, 91, 62, 'cinta de enmascar color blanco', 1, 12.00, 12.00),
 (26, 90, 62, 'cinta color rojo', 1, 10.00, 10.00),
 (27, 86, 62, 'huantyes de seguridad color gris', 1, 15.00, 15.00),
 (28, 85, 62, 'gafas de seguridad', 1, 10.00, 10.00),
 (29, 87, 62, 'cinta acolor nenegro', 1, 50.00, 50.00),
-(30, 95, 63, 'audifonos de seguridad color azul', 1, 50.00, 50.00),
 (31, 91, 63, 'cinta de enmascar color blanco', 1, 12.00, 12.00),
-(32, 93, 63, 'caretilla  colorblanco negro y gris', 1, 20.00, 20.00),
 (33, 87, 63, 'cinta acolor nenegro', 1, 50.00, 50.00),
 (34, 86, 63, 'huantyes de seguridad color gris', 1, 15.00, 15.00),
 (35, 90, 63, 'cinta color rojo', 1, 10.00, 10.00),
 (36, 85, 63, 'gafas de seguridad', 1, 10.00, 10.00),
-(37, 95, 64, 'audifonos de seguridad color azul', 1, 50.00, 50.00),
-(38, 93, 64, 'caretilla  colorblanco negro y gris', 1, 20.00, 20.00),
 (39, 91, 64, 'cinta de enmascar color blanco', 1, 12.00, 12.00),
 (40, 90, 64, 'cinta color rojo', 1, 10.00, 10.00),
 (41, 87, 64, 'cinta acolor nenegro', 1, 50.00, 50.00),
 (42, 86, 64, 'huantyes de seguridad color gris', 1, 15.00, 15.00),
 (43, 85, 64, 'gafas de seguridad', 1, 10.00, 10.00),
-(44, 95, 65, 'audifonos de seguridad color azul', 1, 50.00, 50.00),
-(45, 93, 65, 'caretilla  colorblanco negro y gris', 1, 20.00, 20.00),
 (46, 91, 65, 'cinta de enmascar color blanco', 1, 12.00, 12.00),
 (47, 90, 65, 'cinta color rojo', 1, 10.00, 10.00),
 (48, 87, 65, 'cinta acolor nenegro', 1, 50.00, 50.00),
 (49, 86, 65, 'huantyes de seguridad color gris', 1, 15.00, 15.00),
 (50, 85, 65, 'gafas de seguridad', 1, 10.00, 10.00),
-(51, 95, 66, 'audifonos de seguridad color azul', 1, 50.00, 50.00),
-(52, 93, 66, 'caretilla  colorblanco negro y gris', 1, 20.00, 20.00),
 (53, 91, 66, 'cinta de enmascar color blanco', 1, 12.00, 12.00),
 (54, 90, 66, 'cinta color rojo', 1, 10.00, 10.00),
 (55, 87, 66, 'cinta acolor nenegro', 1, 50.00, 50.00),
 (56, 86, 66, 'huantyes de seguridad color gris', 1, 15.00, 15.00),
 (57, 85, 66, 'gafas de seguridad', 1, 10.00, 10.00),
-(58, 95, 67, 'audifonos de seguridad color azul', 1, 50.00, 50.00),
-(59, 93, 67, 'caretilla  colorblanco negro y gris', 1, 20.00, 20.00),
 (60, 91, 67, 'cinta de enmascar color blanco', 1, 12.00, 12.00),
 (61, 90, 67, 'cinta color rojo', 1, 10.00, 10.00),
 (62, 87, 67, 'cinta acolor nenegro', 1, 50.00, 50.00),
 (63, 86, 67, 'huantyes de seguridad color gris', 1, 15.00, 15.00),
 (64, 85, 67, 'gafas de seguridad', 1, 10.00, 10.00),
-(65, 83, 68, 'COLOR AMARILLO', 1, 40.00, 40.00),
 (66, 82, 68, 'PINTURA COLOR AZUL ', 1, 20.00, 20.00),
-(67, 83, 69, 'COLOR AMARILLO', 6, 40.00, 240.00),
 (68, 82, 69, 'PINTURA COLOR AZUL ', 10, 20.00, 200.00),
 (69, 85, 70, 'gafas de seguridad', 11, 10.00, 110.00),
 (70, 86, 70, 'huantyes de seguridad color gris', 10, 15.00, 150.00),
 (71, 87, 70, 'cinta acolor nenegro', 6, 50.00, 300.00),
-(72, 95, 71, 'audifonos de seguridad color azul', 50, 50.00, 2500.00),
-(73, 93, 71, 'caretilla  colorblanco negro y gris', 10, 20.00, 200.00),
 (74, 91, 71, 'cinta de enmascar color blanco', 20, 12.00, 240.00),
 (75, 90, 71, 'cinta color rojo', 30, 10.00, 300.00),
 (76, 87, 72, 'cinta acolor nenegro', 31, 50.00, 1550.00),
 (77, 98, 73, 'Recuplast Grietas', 100, 25.00, 2500.00),
-(78, 97, 73, 'Recuplast Fibrado', 100, 30.00, 3000.00);
+(78, 97, 73, 'Recuplast Fibrado', 100, 30.00, 3000.00),
+(79, 116, 74, 'teflon color amarillo', 100, 6.00, 600.00),
+(80, 115, 74, 'cinta plateado delgado', 100, 20.00, 2000.00),
+(81, 114, 74, 'cinta plateado ancho', 100, 25.00, 2500.00),
+(82, 113, 74, 'cinta adhesiva doble cara pegamento', 100, 15.00, 1500.00),
+(83, 112, 74, 'Rodillo para techos', 100, 26.00, 2600.00),
+(84, 111, 74, 'Rodillo Aspero', 100, 36.00, 3600.00),
+(85, 110, 74, 'Rodillo mediano', 100, 15.00, 1500.00),
+(86, 109, 74, 'Rodillo blando', 100, 35.00, 3500.00),
+(87, 108, 74, 'Espatula mango de goma', 100, 10.00, 1000.00),
+(88, 107, 74, 'Brocha color cafe', 100, 8.00, 800.00);
 
 -- --------------------------------------------------------
 
@@ -302,33 +293,24 @@ CREATE TABLE `detalle_venta` (
 --
 
 INSERT INTO `detalle_venta` (`id`, `id_producto`, `id_venta`, `producto`, `cantidad`, `precio_venta`, `precio_compra`, `subtotal`) VALUES
-(13, 83, 64, 'COLOR AMARILLO', 1, 50.00, 40.00, 50.00),
 (14, 82, 64, 'PINTURA COLOR AZUL ', 1, 30.00, 20.00, 30.00),
-(15, 81, 64, 'LIJA CON ASPERO  COLOR CAFE', 1, 50.00, 40.00, 50.00),
 (16, 78, 64, 'color negro con arillo', 1, 12.00, 10.00, 12.00),
-(17, 95, 65, 'audifonos de seguridad color azul', 1, 55.00, 50.00, 55.00),
-(18, 93, 65, 'caretilla  colorblanco negro y gris', 1, 25.00, 20.00, 25.00),
 (19, 91, 65, 'cinta de enmascar color blanco', 1, 14.00, 12.00, 14.00),
 (20, 90, 65, 'cinta color rojo', 1, 12.00, 10.00, 12.00),
 (21, 87, 65, 'cinta acolor nenegro', 1, 12.00, 50.00, 12.00),
-(22, 95, 66, 'audifonos de seguridad color azul', 1, 55.00, 50.00, 55.00),
-(23, 93, 66, 'caretilla  colorblanco negro y gris', 1, 25.00, 20.00, 25.00),
-(24, 95, 67, 'audifonos de seguridad color azul', 1, 55.00, 50.00, 55.00),
-(25, 93, 67, 'caretilla  colorblanco negro y gris', 1, 25.00, 20.00, 25.00),
-(26, 95, 68, 'audifonos de seguridad color azul', 1, 55.00, 50.00, 55.00),
-(27, 93, 68, 'caretilla  colorblanco negro y gris', 1, 25.00, 20.00, 25.00),
 (28, 91, 68, 'cinta de enmascar color blanco', 1, 14.00, 12.00, 14.00),
 (29, 91, 69, 'cinta de enmascar color blanco', 1, 14.00, 12.00, 14.00),
 (30, 98, 70, 'Recuplast Grietas', 1, 28.00, 25.00, 28.00),
 (31, 97, 70, 'Recuplast Fibrado', 1, 30.00, 30.00, 30.00),
-(32, 95, 70, 'audifonos de seguridad color azul', 1, 55.00, 50.00, 55.00),
-(33, 93, 70, 'caretilla  colorblanco negro y gris', 1, 25.00, 20.00, 25.00),
 (34, 91, 70, 'cinta de enmascar color blanco', 1, 14.00, 12.00, 14.00),
 (35, 90, 70, 'cinta color rojo', 1, 12.00, 10.00, 12.00),
 (36, 87, 70, 'cinta acolor nenegro', 1, 12.00, 50.00, 12.00),
 (37, 86, 70, 'huantyes de seguridad color gris', 1, 18.00, 15.00, 18.00),
 (38, 85, 70, 'gafas de seguridad', 1, 12.00, 10.00, 12.00),
-(39, 83, 70, 'COLOR AMARILLO', 1, 50.00, 40.00, 50.00);
+(40, 98, 71, 'Recuplast Grietas', 1, 28.00, 25.00, 28.00),
+(41, 97, 71, 'Recuplast Fibrado', 1, 30.00, 30.00, 30.00),
+(43, 116, 72, 'teflon color amarillo', 1, 8.00, 6.00, 8.00),
+(44, 115, 72, 'cinta plateado delgado', 1, 22.00, 20.00, 22.00);
 
 -- --------------------------------------------------------
 
@@ -346,19 +328,19 @@ CREATE TABLE `madelas` (
 --
 
 INSERT INTO `madelas` (`id`, `madela`) VALUES
-(1, 'LIJA PARA PARED'),
-(3, 'LIJA PARA METAL'),
-(4, 'LIJA PARA MADERA'),
-(21, 'disco de corte para metal'),
-(22, 'disco de corte para cerámica '),
+(1, 'Lija para pared'),
+(3, 'Lija para metal'),
+(4, 'Lija para madera'),
+(21, 'Disco de corte para metal'),
+(22, 'Disco de corte para cerámica '),
 (23, 'disco de corte para madera'),
-(27, 'ALICATE DE SUJECCION'),
-(28, 'ALICATE DE CORTE'),
-(29, 'adhesivo para tubos'),
-(30, 'PROTECCION'),
-(31, 'BALDE GRANDE'),
-(32, 'BALDE MEDIANO'),
-(33, 'BALDE PEQUEÑO'),
+(27, 'Alicate de sujeccion'),
+(28, 'Alicate de corte'),
+(29, 'Adhesivo para tubos'),
+(30, 'Seguridad'),
+(31, 'Balde grande'),
+(32, 'Balde mediano'),
+(33, 'Balde pequeño'),
 (34, 'CLAVOS BOLSA DE  1K'),
 (35, 'CARRTILLA'),
 (36, 'impermialisante'),
@@ -366,7 +348,9 @@ INSERT INTO `madelas` (`id`, `madela`) VALUES
 (38, 'Masilla'),
 (39, 'Sellador'),
 (40, 'accesorio para pintar'),
-(41, 'cerradura');
+(41, 'cerradura'),
+(42, 'Rodillos'),
+(43, 'Brochas');
 
 -- --------------------------------------------------------
 
@@ -422,19 +406,30 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`id`, `id_categoria`, `id_marca`, `id_madela`, `nombre`, `codigo`, `descripcion`, `medida`, `imagen`, `stock`, `precio_venta`, `precio_compra`, `ventas`, `fecha`) VALUES
-(78, 6, 7, 29, 'Banda antid', '602', 'color negro con arillo', '5.5M', 'vistas/img/productos/602/597.jpg', 107, 12, 10, 3, '2025-04-02 19:10:10'),
-(81, 1, 7, 3, 'LIJA', '101', 'LIJA CON ASPERO  COLOR CAFE', '100m', 'vistas/img/productos/101/911.jpg', 99, 50, 40, 1, '2025-04-02 19:10:10'),
+(78, 6, 7, 29, 'Banda antid', '602', 'color   amarillo con rayas negras', '100m', 'vistas/img/productos/602/597.jpg', 107, 12, 10, 3, '2025-05-14 14:18:21'),
 (82, 4, 10, 31, 'PINTURA', '401', 'PINTURA COLOR AZUL ', '18L', 'vistas/img/productos/401/349.png', 110, 30, 20, 1, '2025-04-03 20:09:24'),
-(83, 1, 1, 33, 'PINTURA', '102', 'COLOR AMARILLO', '20L', 'vistas/img/productos/102/736.jpg', 103, 50, 40, 4, '2025-05-11 17:40:19'),
 (85, 4, 7, 30, '', '402', 'gafas de seguridad', '30x40mm', 'vistas/img/productos/402/837.jpg', 17, 12, 10, 1, '2025-05-11 17:40:19'),
-(86, 4, 7, 30, '', '403', 'huantyes de seguridad color gris', '15cm', 'vistas/img/productos/403/841.jpg', 17, 18, 15, 1, '2025-05-11 17:40:19'),
+(86, 4, 7, 30, '', '403', 'huantes de seguridad color gris', '15cm', 'vistas/img/productos/403/841.jpg', 17, 18, 15, 1, '2025-05-19 01:46:12'),
 (87, 6, 7, 29, '', '603', 'cinta acolor nenegro', '100m', 'vistas/img/productos/603/104.jpg', 43, 12, 50, 2, '2025-05-11 17:40:19'),
 (90, 6, 7, 29, '', '604', 'cinta color rojo', '100m ', 'vistas/img/productos/604/697.jpg', 36, 12, 10, 2, '2025-05-11 17:40:19'),
 (91, 6, 7, 29, '', '605', 'cinta de enmascar color blanco', '100m', 'vistas/img/productos/605/352.jpg', 24, 14, 12, 4, '2025-05-11 17:40:19'),
-(93, 6, 7, 29, '', '606', 'caretilla  colorblanco negro y gris', '100m', 'vistas/img/productos/606/184.jpg', 13, 25, 20, 5, '2025-05-11 17:40:19'),
-(95, 4, 7, 30, '', '404', 'audifonos de seguridad color azul', '0', 'vistas/img/productos/404/124.jpg', 53, 55, 50, 5, '2025-05-11 17:40:19'),
-(97, 13, 10, 31, '', '1301', 'Recuplast Fibrado', '18L', 'vistas/img/productos/1301/991.jpg', 99, 30, 30, 1, '2025-05-11 17:40:19'),
-(98, 13, 10, 32, '', '1302', 'Recuplast Grietas', '10L', 'vistas/img/productos/1302/961.jpg', 99, 28, 25, 1, '2025-05-11 17:40:19');
+(97, 13, 10, 31, '', '1301', 'Recuplast Fibrado', '18L', 'vistas/img/productos/1301/991.jpg', 98, 30, 30, 2, '2025-05-12 11:56:21'),
+(98, 13, 10, 32, '', '1302', 'Recuplast Grietas', '10L', 'vistas/img/productos/1302/961.jpg', 98, 28, 25, 2, '2025-05-12 11:56:21'),
+(100, 13, 10, 33, '', '1303', 'Recuplast Frentes', '18L', 'vistas/img/productos/1303/362.jpg', 0, 22, 20, NULL, '2025-05-12 12:37:32'),
+(101, 13, 10, 31, '', '1304', 'Recuplast  Tradicional', '18L', 'vistas/img/productos/1304/682.jpg', 0, 22, 20, NULL, '2025-05-12 12:38:23'),
+(102, 13, 10, 31, '', '1305', 'Recuplast Techos', '18L', 'vistas/img/productos/1305/386.jpg', 0, 24, 22, NULL, '2025-05-12 12:39:15'),
+(103, 13, 10, 31, '', '1306', 'Recuplast Flexible', '18L', 'vistas/img/productos/1306/326.jpg', 0, 21, 19, NULL, '2025-05-12 12:40:07'),
+(106, 4, 7, 43, '', '405', 'Brocha color amarillo', '10cmx5mm', 'vistas/img/productos/405/293.jpg', 0, 10, 8, NULL, '2025-05-12 12:57:53'),
+(107, 4, 7, 43, '', '406', 'Brocha color cafe', '10cmx5mm', 'vistas/img/productos/406/244.jpg', 100, 10, 8, NULL, '2025-07-03 21:12:37'),
+(108, 4, 7, 43, '', '407', 'Espatula mango de goma', '10cmx5mm', 'vistas/img/productos/407/787.jpg', 100, 12, 10, NULL, '2025-07-03 21:12:37'),
+(109, 4, 7, 42, '', '408', 'Rodillo blando', '15cm', 'vistas/img/productos/408/534.jpg', 100, 38, 35, NULL, '2025-07-03 21:12:37'),
+(110, 4, 7, 42, '', '409', 'Rodillo mediano', '15cm', 'vistas/img/productos/409/429.jpg', 100, 18, 15, NULL, '2025-07-03 21:12:37'),
+(111, 4, 7, 42, '', '410', 'Rodillo Aspero', '18cmx8mm', 'vistas/img/productos/410/358.jpg', 100, 38, 36, NULL, '2025-07-03 21:12:37'),
+(112, 4, 7, 42, '', '411', 'Rodillo para techos', '10cmx5mm', 'vistas/img/productos/411/549.jpg', 100, 28, 26, NULL, '2025-07-03 21:12:37'),
+(113, 6, 7, 29, '', '607', 'cinta adhesiva doble cara pegamento', '100m', 'vistas/img/productos/607/143.jpg', 100, 18, 15, NULL, '2025-07-03 21:12:37'),
+(114, 6, 7, 29, '', '608', 'cinta plateado ancho', '100m', 'vistas/img/productos/608/261.jpg', 100, 26, 25, NULL, '2025-07-03 21:12:37'),
+(115, 6, 7, 29, '', '609', 'cinta plateado delgado', '100m', 'vistas/img/productos/609/371.jpg', 99, 22, 20, 1, '2025-07-03 21:13:08'),
+(116, 6, 7, 29, '', '610', 'teflon color amarillo', '100m', 'vistas/img/productos/610/934.jpg', 99, 8, 6, 1, '2025-07-03 21:13:08');
 
 -- --------------------------------------------------------
 
@@ -491,7 +486,7 @@ CREATE TABLE `usuarios` (
 
 INSERT INTO `usuarios` (`id`, `nombre`, `usuario`, `password`, `perfil`, `foto`, `estado`, `ultimo_login`, `fecha`) VALUES
 (1, 'admin', 'admin', '$2a$07$asxx54ahjppf45sd87a5auGZEtGHuyZwm.Ur.FJvWLCql3nmsMbXy', 'Administrador', 'vistas/img/usuarios/admin/522.png', 1, '2025-04-22 20:58:57', '2025-04-23 00:58:57'),
-(2, 'Mario Terrazas', 'mario', '$2a$07$asxx54ahjppf45sd87a5auQ/NJtQNnAMPFo71ZO28SPo1sLrZVwrq', 'Administrador', 'vistas/img/usuarios/mario/949.jpg', 1, '2025-05-11 19:58:24', '2025-05-11 23:58:24'),
+(2, 'Jose Andres Gutierrez', 'mario', '$2a$07$asxx54ahjppf45sd87a5auQ/NJtQNnAMPFo71ZO28SPo1sLrZVwrq', 'Administrador', 'vistas/img/usuarios/mario/949.jpg', 1, '2025-07-03 17:38:38', '2025-07-13 17:14:31'),
 (6, 'Carla Alejandra ', 'carla', '$2a$07$asxx54ahjppf45sd87a5auzrnXKQ/xqxfrDlQ2vTa4aimiFqQJwKW', 'Vendedor', 'vistas/img/usuarios/carla/606.png', 1, '2025-04-03 15:55:22', '2025-04-03 19:55:22'),
 (8, 'Jhanel Solles', 'jhanel', '$2a$07$asxx54ahjppf45sd87a5au5jSg5fYHiKgM7Vu2SkqkgsuFVQGlwo2', 'Vendedor', 'vistas/img/usuarios/jhanel/228.jpg', 1, '0000-00-00 00:00:00', '2025-04-03 19:57:21'),
 (9, 'Carlos Vega', 'carlos', '$2a$07$asxx54ahjppf45sd87a5auelrdZeBYZ4t33w118t1DE5bSBf9deF2', 'Vendedor', 'vistas/img/usuarios/carlos/588.png', 1, '0000-00-00 00:00:00', '2025-04-03 19:57:17'),
@@ -509,7 +504,8 @@ INSERT INTO `usuarios` (`id`, `nombre`, `usuario`, `password`, `perfil`, `foto`,
 (21, 'Jose Emanuel Irriarte Becerra', 'jose', '$2a$07$asxx54ahjppf45sd87a5auOsTcxV66Wf1lWFlt.R6o37VOXIB1YhO', 'Administrador', 'vistas/img/usuarios/jose/475.jpg', 1, '0000-00-00 00:00:00', '2025-05-11 15:50:41'),
 (22, 'Jheny Angela Chambi Mamani', 'angela', '$2a$07$asxx54ahjppf45sd87a5aupEWanzXNWwA0/4j9qb2ws25ruWlUff.', 'Administrador', 'vistas/img/usuarios/angela/366.jpg', 1, '0000-00-00 00:00:00', '2025-05-11 15:50:40'),
 (23, 'Luis Enrique Vaca Pinto', 'luis', '$2a$07$asxx54ahjppf45sd87a5auwx8lyuZ.kds4dac831wJ6GwzvInb.wG', 'Vendedor', 'vistas/img/usuarios/luis/664.jpg', 1, '0000-00-00 00:00:00', '2025-05-11 15:55:01'),
-(25, 'Eunice Rios Zarete', 'eunice', '$2a$07$asxx54ahjppf45sd87a5auH.hD78n/JL2XJd6wDtyO4QR3LXXTlme', 'Vendedor', 'vistas/img/usuarios/eunice/528.jpg', 1, '0000-00-00 00:00:00', '2025-05-11 15:56:48');
+(25, 'Eunice Rios Zarete', 'eunice', '$2a$07$asxx54ahjppf45sd87a5auH.hD78n/JL2XJd6wDtyO4QR3LXXTlme', 'Vendedor', 'vistas/img/usuarios/eunice/528.jpg', 1, '0000-00-00 00:00:00', '2025-05-14 18:10:48'),
+(26, 'Soporte', 'soporte', '$2a$07$asxx54ahjppf45sd87a5auGZEtGHuyZwm.Ur.FJvWLCql3nmsMbXy', 'Administrador', 'vistas/img/usuarios/soporte/412.jpg', 1, '2025-07-13 13:12:27', '2025-07-13 17:12:27');
 
 -- --------------------------------------------------------
 
@@ -531,13 +527,15 @@ CREATE TABLE `ventas` (
 --
 
 INSERT INTO `ventas` (`id`, `codigo`, `id_cliente`, `id_vendedor`, `total`, `fecha`) VALUES
-(64, 10005, 11, 1, 142, '2025-04-02 19:10:10'),
-(65, 10006, 11, 10, 118, '2025-04-03 20:37:06'),
-(66, 10007, 1, 2, 80, '2025-04-25 19:05:21'),
-(67, 10008, 1, 2, 80, '2025-05-11 16:56:15'),
-(68, 10009, 1, 2, 94, '2025-05-11 16:56:57'),
-(69, 10010, 1, 2, 14, '2025-05-11 17:35:58'),
-(70, 10011, 1, 2, 256, '2025-05-11 17:40:20');
+(64, 10005, 11, 1, 142, '2022-01-01 19:10:10'),
+(65, 10006, 11, 10, 118, '2022-01-01 20:37:06'),
+(66, 10007, 1, 2, 80, '2022-01-01 19:05:21'),
+(67, 10008, 1, 2, 80, '2022-01-01 16:56:15'),
+(68, 10009, 1, 2, 94, '2022-01-01 16:56:57'),
+(69, 10010, 1, 2, 14, '2022-01-01 17:35:58'),
+(70, 10011, 1, 2, 256, '2022-01-11 05:00:00'),
+(71, 10012, 1, 2, 113, '2025-05-12 11:56:21'),
+(72, 10013, 1, 2, 30, '2025-07-03 21:13:08');
 
 --
 -- Índices para tablas volcadas
@@ -628,7 +626,7 @@ ALTER TABLE `ventas`
 -- AUTO_INCREMENT de la tabla `categorias`
 --
 ALTER TABLE `categorias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de la tabla `clientes`
@@ -640,25 +638,25 @@ ALTER TABLE `clientes`
 -- AUTO_INCREMENT de la tabla `compras`
 --
 ALTER TABLE `compras`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
 
 --
 -- AUTO_INCREMENT de la tabla `detalle_compra`
 --
 ALTER TABLE `detalle_compra`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=89;
 
 --
 -- AUTO_INCREMENT de la tabla `detalle_venta`
 --
 ALTER TABLE `detalle_venta`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- AUTO_INCREMENT de la tabla `madelas`
 --
 ALTER TABLE `madelas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT de la tabla `marcas`
@@ -670,7 +668,7 @@ ALTER TABLE `marcas`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=121;
 
 --
 -- AUTO_INCREMENT de la tabla `proveedor`
@@ -682,13 +680,13 @@ ALTER TABLE `proveedor`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT de la tabla `ventas`
 --
 ALTER TABLE `ventas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
 
 --
 -- Restricciones para tablas volcadas

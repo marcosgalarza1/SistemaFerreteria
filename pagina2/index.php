@@ -783,7 +783,7 @@ $marcas = $stmtMarcas->fetchAll(PDO::FETCH_ASSOC);
             <div class="container">
                 <div class="footer-bottom-wrapper d-flex align-items-center justify-content-between">
                     <p class="wow fadeInLeft" data-wow-delay=".3s">
-                        © Copyright <span class="theme-color-3">2025</span> <a href="index.html">SistemaPos</a>.Todos
+                        © Copyright <span class="theme-color-3">2025</span> <a href="index.php">SistemaPos</a>.Todos
                         los derechos reservados.
                         los derechos reservados.
                     </p>
